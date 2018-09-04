@@ -3,3 +3,5 @@
 candidates.csv
 candidates.xls
 out.csv
+.DS_Store
+candidates.ods
