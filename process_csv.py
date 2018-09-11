@@ -62,7 +62,9 @@ for candidate in candidates:
 
     # Count toward stages if active
     if candidate["Status"] == "Active":
-        stageCounts[candidate["Stage"]] += 1
+        # Skip if it's not a stage we're aware of
+        if candidate["Stage"] in stagesInOrder:
+            stageCounts[candidate["Stage"]] += 1
 
     # Highlight certain candidates in interesting stages
     if candidate["Status"] == "Active" and candidate["Stage"] in stagesToHighlight:
