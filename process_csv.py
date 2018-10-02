@@ -94,9 +94,9 @@ f.write("\n")
 # Highlights
 def printHighlightedCandidate(candidate, f):
     if candidate["Title"] and candidate["Company"]:
-        f.write("  %s %s - %s @ %s\n" % (candidate["First Name"], candidate["Last Name"], candidate["Title"], candidate["Company"]))
+        f.write("\"  %s %s - %s @ %s\"\n" % (candidate["First Name"], candidate["Last Name"], candidate["Title"], candidate["Company"]))
     else:
-        f.write("  %s %s\n" % (candidate["First Name"], candidate["Last Name"]))
+        f.write("\"  %s %s\"\n" % (candidate["First Name"], candidate["Last Name"]))
 
 f.write("HIGHLIGHTS\n")
 for stage in stagesToHighlight:
